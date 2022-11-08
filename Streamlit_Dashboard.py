@@ -16,7 +16,7 @@ st.markdown("""
 st.header('Multi-Dimension dPCR dataset Analysis Dashboard')
 
 st.markdown('''
-This is dashboard showing the multiple ways of plots for large scale dPCR dataset
+This is a dashboard showing multiple ways of plots for large scale dPCR dataset. By uploading plate's partition_summary_table.csv and select one or multiple samples to view different samples' dye to dye interaction. 
 ''')
 
 st.header('Upload dataset')
