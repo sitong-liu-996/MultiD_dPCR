@@ -22,8 +22,13 @@ This is dashboard showing the multiple ways of plots for large scale dPCR datase
 st.header('Upload dataset')
 
 # uploaded dataset
-uploaded_file = st.file_uploader("Choose a Run's partition_summary_table.csv file", type='.csv')
-data = pd.read_csv(uploaded_file)
+try:
+    uploaded_file = st.file_uploader("Choose a Run's partition_summary_table.csv file", type='.csv')
+    if uploaded_file is not None:
+        data = pd.read_csv(uploaded_file)
+        st.write('## Dataset')
+except:
+    st.write('Please upload a file to continue...')
 
 # unstack dataset
 df1 = data[['Run', 'Sample','Index','Channel', 'C40']]
