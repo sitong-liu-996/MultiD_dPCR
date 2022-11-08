@@ -1,6 +1,3 @@
-import tkinter as tk
-import math
-import json
 import pandas as pd
 import streamlit as st
 import hiplot as hip
