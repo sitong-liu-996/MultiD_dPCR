@@ -13,7 +13,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.header('Multi-Dimension dPCR dataset Analysis Dashboard')
+st.header('Multi-Dimension dPCR Data Analysis Interactive Dashboard')
 
 st.markdown('''
 This is a dashboard showing multiple ways of plots for large scale dPCR dataset. \\
