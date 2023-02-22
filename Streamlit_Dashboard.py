@@ -52,7 +52,7 @@ try:
     multiD_df1 = multiD_df[multiD_df['Sample'].isin(sample_slider1)]
 
     multiD_plot = hip.Experiment.from_dataframe(multiD_df1)
-    multiD_plot.to_streamlit(ret="selected_uids", key="hip1").display(store_state_key="cell1")
+    multiD_plot.to_streamlit(ret="selected_uids", key="hip1").display()
 
 
     # 2D plot
