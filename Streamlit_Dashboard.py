@@ -46,13 +46,13 @@ try:
     sample_slider1 = st.multiselect("Enter Sample Input For Sample Groups",
                                     ['A1', 'A2', 'A3', 'A4', 'B1', 'B2', 'B3', 'B4',
                                      'C1', 'C2', 'C3', 'C4', 'D1', 'D2', 'D3', 'D4'],
-                                    ['A1', 'B1', 'C1', 'D1'])
+                                    ['A1'])
     st.write("You entered: ", sample_slider1)
 
     multiD_df1 = multiD_df[multiD_df['Sample'].isin(sample_slider1)]
 
     multiD_plot = hip.Experiment.from_dataframe(multiD_df1)
-    multiD_plot.to_streamlit(ret="selected_uids", key="hip1").display()
+    multiD_plot.to_streamlit(ret="selected_uids", key="hip1").display(store_state_key="cell1")
 
 
     # 2D plot
@@ -61,7 +61,7 @@ try:
     sample_slider = st.multiselect("Enter Sample Input For 2D plot",
                                     ['A1', 'A2', 'A3', 'A4', 'B1', 'B2', 'B3', 'B4',
                                      'C1', 'C2', 'C3', 'C4', 'D1', 'D2', 'D3', 'D4'],
-                                    ['A1', 'B1', 'C1', 'D1'])
+                                    ['A1'])
     st.write("You entered: ", sample_slider)
 
     data1 = df[df['Sample'].isin(sample_slider)]
